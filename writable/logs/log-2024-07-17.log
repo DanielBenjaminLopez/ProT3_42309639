@@ -1,0 +1,113 @@
+CRITICAL - 2024-07-17 00:55:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "crud_usuarios.php"
+[Method: GET, Route: crud_usuarios]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('crud_usuarios.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('crud_usuarios', [], true)
+ 3 APPPATH\Controllers\usuario_controller.php(24): view('crud_usuarios', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario_controller->listar_usuarios()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 01:09:27 --> ErrorException: include(Models/conexion.php): Failed to open stream: No such file or directory
+[Method: GET, Route: crud_usuarios]
+in APPPATH\Views\back\usuario\crud_usuarios.php on line 23.
+ 1 APPPATH\Views\back\usuario\crud_usuarios.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(Models/conexion.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ProT3_42309639\\app\\Views\\back\\usuario\\crud_usuarios.php', 23)
+ 2 APPPATH\Views\back\usuario\crud_usuarios.php(23): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProT3_42309639\\app\\Views\\back\\usuario\\crud_usuarios.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('back/usuario/crud_usuarios', [], true)
+ 6 APPPATH\Controllers\Home.php(45): view('back/usuario/crud_usuarios')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->crud_usuarios()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 01:10:19 --> ErrorException: include(/Models/conexion.php): Failed to open stream: No such file or directory
+[Method: GET, Route: crud_usuarios]
+in APPPATH\Views\back\usuario\crud_usuarios.php on line 23.
+ 1 APPPATH\Views\back\usuario\crud_usuarios.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(/Models/conexion.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ProT3_42309639\\app\\Views\\back\\usuario\\crud_usuarios.php', 23)
+ 2 APPPATH\Views\back\usuario\crud_usuarios.php(23): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProT3_42309639\\app\\Views\\back\\usuario\\crud_usuarios.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('back/usuario/crud_usuarios', [], true)
+ 6 APPPATH\Controllers\Home.php(45): view('back/usuario/crud_usuarios')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->crud_usuarios()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 01:10:26 --> ErrorException: include(/Models/conexion.php): Failed to open stream: No such file or directory
+[Method: GET, Route: crud_usuarios]
+in APPPATH\Views\back\usuario\crud_usuarios.php on line 23.
+ 1 APPPATH\Views\back\usuario\crud_usuarios.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(/Models/conexion.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ProT3_42309639\\app\\Views\\back\\usuario\\crud_usuarios.php', 23)
+ 2 APPPATH\Views\back\usuario\crud_usuarios.php(23): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProT3_42309639\\app\\Views\\back\\usuario\\crud_usuarios.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('back/usuario/crud_usuarios', [], true)
+ 6 APPPATH\Controllers\Home.php(45): view('back/usuario/crud_usuarios')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->crud_usuarios()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 03:47:19 --> ErrorException: foreach() argument must be of type array|object, null given
+[Method: GET, Route: crud_usuarios]
+in APPPATH\Views\back\usuario\crud_usuarios.php on line 57.
+ 1 APPPATH\Views\back\usuario\crud_usuarios.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\ProT3_42309639\\app\\Views\\back\\usuario\\crud_usuarios.php', 57)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProT3_42309639\\app\\Views\\back\\usuario\\crud_usuarios.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('back/usuario/crud_usuarios', [], true)
+ 5 APPPATH\Controllers\Home.php(49): view('back/usuario/crud_usuarios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->crud_usuarios()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 03:51:07 --> ErrorException: foreach() argument must be of type array|object, null given
+[Method: GET, Route: crud_usuarios]
+in APPPATH\Views\back\usuario\crud_usuarios.php on line 57.
+ 1 APPPATH\Views\back\usuario\crud_usuarios.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\ProT3_42309639\\app\\Views\\back\\usuario\\crud_usuarios.php', 57)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProT3_42309639\\app\\Views\\back\\usuario\\crud_usuarios.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('back/usuario/crud_usuarios', [], true)
+ 5 APPPATH\Controllers\Home.php(49): view('back/usuario/crud_usuarios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->crud_usuarios()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 03:57:53 --> ErrorException: foreach() argument must be of type array|object, null given
+[Method: GET, Route: crud_usuarios]
+in APPPATH\Views\back\usuario\crud_usuarios.php on line 57.
+ 1 APPPATH\Views\back\usuario\crud_usuarios.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\ProT3_42309639\\app\\Views\\back\\usuario\\crud_usuarios.php', 57)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProT3_42309639\\app\\Views\\back\\usuario\\crud_usuarios.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('back/usuario/crud_usuarios', [], true)
+ 5 APPPATH\Controllers\usuario_controller.php(36): view('back/usuario/crud_usuarios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario_controller->crud_usuarios()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 04:19:19 --> ErrorException: Undefined array key "id_perfil"
+[Method: GET, Route: crud_usuarios]
+in APPPATH\Views\back\usuario\crud_usuarios.php on line 24.
+ 1 APPPATH\Views\back\usuario\crud_usuarios.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_perfil"', 'C:\\xampp\\htdocs\\ProT3_42309639\\app\\Views\\back\\usuario\\crud_usuarios.php', 24)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProT3_42309639\\app\\Views\\back\\usuario\\crud_usuarios.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('back/usuario/crud_usuarios', [], true)
+ 5 APPPATH\Controllers\usuario_controller.php(36): view('back/usuario/crud_usuarios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\usuario_controller->crud_usuarios()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
