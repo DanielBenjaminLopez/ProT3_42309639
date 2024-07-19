@@ -6,9 +6,9 @@
         </div>
         <div class=" order-3 p-2">
             <p>Síguenos en:
-                <a href="https://www.facebook.com/relojescorrentinos" target="_blank"> <img src="assets/img/facebook.png" alt="Logo" width="32" height="32"></a>|
-                <a href="https://www.twitter.com/relojescorrentinos" target="_blank"><img src="assets/img/Twitter.jpg" alt="Logo" width="27" height="27" class="rounded"></a>|
-                <a href="https://www.instagram.com/relojescorrentinos" target="_blank"><img src="assets/img/instagram.png" alt="Logo" width="30" height="30"></a>
+                <a href="https://www.facebook.com/relojescorrentinos" target="_blank"> <img src="<?php echo base_url('assets/img/facebook.png'); ?>" alt="Logo" width="32" height="32"></a>|
+                <a href="https://www.twitter.com/relojescorrentinos" target="_blank"><img src="<?php echo base_url('assets/img/Twitter.jpg'); ?>" alt="Logo" width="27" height="27" class="rounded"></a>|
+                <a href="https://www.instagram.com/relojescorrentinos" target="_blank"><img src="<?php echo base_url('assets/img/instagram.png'); ?>" alt="Logo" width="30" height="30"></a>
             </p>
         </div>
     </div>

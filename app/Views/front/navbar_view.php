@@ -19,18 +19,18 @@ $perfil = $session->get('perfil_id');
       <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li>
-            <a class="navbar-brand" href="principal">
-              <img src="assets/img/icono_camara.jfif" alt="Logo" width="30" height="30" class="d-inline-block rounded-circle border border-light">
+            <a class="navbar-brand" href="<?php echo base_url('principal'); ?>">
+              <img src="<?php echo base_url('assets/img/icono_camara.jfif'); ?>" alt="Logo" width="30" height="30" class="d-inline-block rounded-circle border border-light">
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-light fw-bold" aria-current="page" href="principal">BEVIMAX</a>
+            <a class="nav-link active text-light fw-bold" aria-current="page" href="<?php echo base_url('principal'); ?>">BEVIMAX</a>
           </li>
           <li>
-            <a class="nav-link text-light" href='registro'>Registrar</a>
+            <a class="nav-link text-light" href='<?php echo base_url('registro'); ?>'>Registrar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href='crud_usuarios'>Usuarios</a>
+            <a class="nav-link text-light" href='<?php echo base_url('crud_usuarios'); ?>'>Usuarios</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-light" href='<?php echo base_url('/logout'); ?>'>Cerrar sesión</a>
@@ -70,13 +70,13 @@ $perfil = $session->get('perfil_id');
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-light fw-bold" aria-current="page" href="principal">BEVIMAX</a>
+            <a class="nav-link active text-light fw-bold" aria-current="page" href="<?php echo base_url('principal'); ?>">BEVIMAX</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href='acerca_de'>Acerca de</a>
+            <a class="nav-link text-light" href='<?php echo base_url('acerca_de'); ?>'>Acerca de</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href='quienes_somos'>Quienes somos</a>
+            <a class="nav-link text-light" href='<?php echo base_url('quienes_somos'); ?>'>Quienes somos</a>
           </li>
 
           <li class="nav-item">
@@ -112,19 +112,19 @@ $perfil = $session->get('perfil_id');
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-light fw-bold" aria-current="page" href="principal">BEVIMAX</a>
+            <a class="nav-link active text-light fw-bold" aria-current="page" href="<?php echo base_url('principal'); ?>">BEVIMAX</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href='acerca_de'>Acerca de</a>
+            <a class="nav-link text-light" href='<?php echo base_url('acerca_de'); ?>'>Acerca de</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href='quienes_somos'>Quienes somos</a>
+            <a class="nav-link text-light" href='<?php echo base_url('quienes_somos'); ?>'>Quienes somos</a>
           </li>
           <li>
-            <a class="nav-link text-light" href='registro'>Registrarse</a>
+            <a class="nav-link text-light" href='<?php echo base_url('registro'); ?>'>Registrarse</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href='login'>Login</a>
+            <a class="nav-link text-light" href='<?php echo base_url('login'); ?>'>Login</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

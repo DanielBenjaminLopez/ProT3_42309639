@@ -18,4 +18,8 @@ class usuario_model extends Model
     {
         return $this->findAll();
     }
+    public function getUsuario($id)
+    {
+        return $this->where('id_usuario', $id)->first($id);
+    }
 }

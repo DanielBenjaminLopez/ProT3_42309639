@@ -6,12 +6,7 @@ use App\Models\usuario_model;
 
 class Home extends BaseController
 {
-    //public function index(): string
-    // {
-    //return view('front/head_view');
-    //return view('front/principal');
-    //return view('front/footer_view');
-    //}
+
     public function index(): string
     {
         // Concatenar las vistas en una sola cadena de texto

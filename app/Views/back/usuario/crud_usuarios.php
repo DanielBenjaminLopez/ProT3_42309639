@@ -15,7 +15,7 @@
                                 <th scope="col">usuario</th>
                                 <th scope="col">email</th>
                                 <th scope="col">baja</th>
-                                <th scope="col">-</th>
+                                <th scope="col">acción</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -30,7 +30,9 @@
                                             <td><?= $usuario['email'] ?></td>
                                             <td><?= $usuario['baja'] ?></td>
                                             <td>
-                                                <a href="">editar</a>
+                                                <!-- Aca hago el ruteo "directo" y le paso el dato-->
+
+                                                <a href="<?= site_url('edit/' . $usuario['id_usuario']) ?>">editar</a>
                                                 <a href="">eliminar</a>
                                             </td>
                                         </tr>

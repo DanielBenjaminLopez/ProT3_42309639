@@ -40,6 +40,51 @@ class usuario_controller extends Controller
         return $headView . $navbarView . $crud_usuariosView . $footerView;
     }
 
+    public function edit($id)
+    {
+        $model = new usuario_model();
+        $dato = $model->getUsuario($id);
+        $data['titulo'] = 'Editar';
+        $headView = view('front/head_view', $data);
+        $navbarView = view('front/navbar_view');
+        $editView = view('back/usuario/edit', compact('dato'));
+        $footerView = view('front/footer_view');
+
+        // Devolver la concatenación de todas las vistas
+        return $headView . $navbarView . $editView . $footerView;
+    }
+
+    public function update($id = null)
+    {
+        $input = $this->validate(
+            [
+                'id_usuario' => 'required',
+                'nombre' => 'required|min_length[3]',
+                'apellido' => 'required|min_length[3]|max_length[25]',
+                'usuario' => 'required|min_length[3]',
+                'email' => 'required|min_length[4]|max_length[100]|valid_email|is_unique[usuarios.email]',
+
+            ],
+        );
+        if (!$input) {
+            $data['titulo'] = 'ErrorUpdate';
+            echo view('front/head_view', $data);
+            echo view('front/navbar_view');
+            echo view('back/usuario/registro');
+            echo view('front/footer_view');
+        }
+        $post = $this->request->getPost(['id_usuario', 'nombre', 'apellido', 'usuario', 'email']);
+        $usuarioModel = new usuario_model();
+        $usuarioModel->update($id, [
+            'nombre' => $post['nombre'],
+            'apellido' => $post['apellido'],
+            'usuario' => $post['usuario'],
+            'email' => $post['email'],
+        ]);
+        return redirect()->to('back/usuario/crud_usuarios');
+    }
+
+
     public function formValidation()
     {
         $input = $this->validate(
