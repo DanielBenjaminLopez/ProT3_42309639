@@ -77,7 +77,7 @@ class usuario_controller extends Controller
         }
 
         $post = $this->request->getPost(['id_usuario', 'nombre', 'apellido', 'usuario', 'email', 'baja']);
-        $usuarioModel = new \App\Models\Usuario_model();
+        $usuarioModel = new usuario_model();
 
         if ($usuarioModel->update($id, $post)) {
             return redirect()->to(base_url('crud_usuarios'));
@@ -89,34 +89,21 @@ class usuario_controller extends Controller
             echo view('front/footer_view');
         }
     }
-    public function updatePrueba($id = null)
-    {
-        $input = $this->validate(
-            [
-                'id_usuario' => 'required',
-                'nombre' => 'required|min_length[3]',
-                'apellido' => 'required|min_length[3]|max_length[25]',
-                'usuario' => 'required|min_length[3]',
-                'email' => 'required|min_length[4]|max_length[100]|valid_email|is_unique[usuarios.email]',
 
-            ],
-        );
-        if (!$input) {
-            $data['titulo'] = 'ErrorUpdate';
+
+    public function delete($id = null)
+    {
+        if (!$this->request->is('delete') || $id == null) {
+            $data['titulo'] = 'ErrorDelete';
             echo view('front/head_view', $data);
             echo view('front/navbar_view');
             echo view('back/usuario/registro');
             echo view('front/footer_view');
+            return;
         }
-        $post = $this->request->getPost(['id_usuario', 'nombre', 'apellido', 'usuario', 'email']);
         $usuarioModel = new usuario_model();
-        $usuarioModel->update($id, [
-            'nombre' => $post['nombre'],
-            'apellido' => $post['apellido'],
-            'usuario' => $post['usuario'],
-            'email' => $post['email'],
-        ]);
-        return redirect()->to('back/usuario/crud_usuarios');
+        $usuarioModel->delete($id);
+        return redirect()->to(base_url('crud_usuarios'));
     }
 
 
@@ -135,13 +122,14 @@ class usuario_controller extends Controller
         $formModel = new usuario_model();
 
         if (!$input) {
-            //ACA ya no PUEDE HABER PROBLEMAS PORQUE ES DISTINTO AL VIDEO AUNQUE HARIA LO MISMO
+            //Muestra error
             $data['titulo'] = 'backREGISTRO_back';
             echo view('front/head_view', $data);
             echo view('front/navbar_view');
             echo view('back/usuario/registro'), ['validation' => $this->validator];
             echo view('front/footer_view');
         } else {
+            //Guarda
             $formModel->save([
                 //this request trae del formulario, lo que ponemos a la derecha tiene que coincidir con el formulario
                 'nombre' => $this->request->getVar('nombre'),
@@ -156,7 +144,7 @@ class usuario_controller extends Controller
             session()->setFlashdata('success', 'Usuario registrado con exito');
             //return $this->response->redirect('/panel');
             //ACA CAMBIÉ EL RETURN PORQUE NO FUNCIONABA LA REDIRECCIÓN
-            return redirect()->to('/login');
+            return redirect()->to('principal');
         }
     }
 }

@@ -19,7 +19,7 @@ $routes->get('edit/(:num)', 'usuario_controller::edit/$1');
 //probando- esto deberia ser post
 //$routes->put('update/(:num)', 'usuario_controller::update/$1');
 $routes->put('update/(:num)', 'usuario_controller::update/$1');
-$routes->delete('delete/(:num', 'usuario_controller::delete/$1');
+$routes->delete('delete/(:num)', 'usuario_controller::delete/$1');
 
 
 //rutas del Registro de usuarios

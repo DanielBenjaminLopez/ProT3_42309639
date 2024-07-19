@@ -15,7 +15,7 @@
                             <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
                         <?php endif ?>
                         <?php if (!empty(session()->getFlashdata('success'))) : ?>
-                            <div class="alert alert-danger"><?= session()->getFlashdata('success'); ?></div>
+                            <div class="alert alert-warning"><?= session()->getFlashdata('success'); ?></div>
                         <?php endif ?>
 
                         <div class="mb-3">
