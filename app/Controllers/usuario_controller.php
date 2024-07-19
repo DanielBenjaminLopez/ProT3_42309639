@@ -62,6 +62,41 @@ class usuario_controller extends Controller
                 'nombre' => 'required|min_length[3]',
                 'apellido' => 'required|min_length[3]|max_length[25]',
                 'usuario' => 'required|min_length[3]',
+                'email' => 'required|min_length[4]|max_length[100]|valid_email',
+                'baja' => 'required'
+            ]
+        );
+
+        if (!$input) {
+            $data['titulo'] = 'ErrorUpdate';
+            echo view('front/head_view', $data);
+            echo view('front/navbar_view');
+            echo view('back/usuario/registro');
+            echo view('front/footer_view');
+            return;
+        }
+
+        $post = $this->request->getPost(['id_usuario', 'nombre', 'apellido', 'usuario', 'email', 'baja']);
+        $usuarioModel = new \App\Models\Usuario_model();
+
+        if ($usuarioModel->update($id, $post)) {
+            return redirect()->to(base_url('crud_usuarios'));
+        } else {
+            $data['titulo'] = 'ErrorUpdate';
+            echo view('front/head_view', $data);
+            echo view('front/navbar_view');
+            echo view('back/usuario/registro');
+            echo view('front/footer_view');
+        }
+    }
+    public function updatePrueba($id = null)
+    {
+        $input = $this->validate(
+            [
+                'id_usuario' => 'required',
+                'nombre' => 'required|min_length[3]',
+                'apellido' => 'required|min_length[3]|max_length[25]',
+                'usuario' => 'required|min_length[3]',
                 'email' => 'required|min_length[4]|max_length[100]|valid_email|is_unique[usuarios.email]',
 
             ],

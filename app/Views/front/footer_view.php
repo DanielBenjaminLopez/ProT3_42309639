@@ -15,6 +15,10 @@
 
 </footer>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+<!-- AGREGA JAVASCRIPTS PARA MODAL DELETE-->
+<?php echo $this->renderSection('script'); ?>
+
 </body>
 
 </html>
