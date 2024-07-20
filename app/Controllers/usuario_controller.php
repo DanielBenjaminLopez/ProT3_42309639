@@ -114,7 +114,14 @@ class usuario_controller extends Controller
                 'nombre' => 'required|min_length[3]',
                 'apellido' => 'required|min_length[3]|max_length[25]',
                 'usuario' => 'required|min_length[3]',
-                'email' => 'required|min_length[4]|max_length[100]|valid_email|is_unique[usuarios.email]',
+                'email' => [
+                    'rules' => 'required|valid_email|is_unique[usuarios.email]',
+                    'errors' => [
+                        'required' => 'El campo de correo electrónico es obligatorio.',
+                        'valid_email' => 'Debe ingresar un correo electrónico válido.',
+                        'is_unique' => 'El correo electrónico ya está registrado.'
+                    ]
+                ],
                 'pass' => 'required|min_length[3]|max_length[100]',
 
             ],
@@ -123,10 +130,10 @@ class usuario_controller extends Controller
 
         if (!$input) {
             //Muestra error
-            $data['titulo'] = 'backREGISTRO_back';
+            $data['titulo'] = 'Registro';
             echo view('front/head_view', $data);
             echo view('front/navbar_view');
-            echo view('back/usuario/registro'), ['validation' => $this->validator];
+            echo view('back/usuario/registro', ['validation' => $this->validator]);
             echo view('front/footer_view');
         } else {
             //Guarda
@@ -144,7 +151,7 @@ class usuario_controller extends Controller
             session()->setFlashdata('success', 'Usuario registrado con exito');
             //return $this->response->redirect('/panel');
             //ACA CAMBIÉ EL RETURN PORQUE NO FUNCIONABA LA REDIRECCIÓN
-            return redirect()->to('principal');
+            return redirect()->to('registro');
         }
     }
 }

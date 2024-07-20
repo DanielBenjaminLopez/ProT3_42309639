@@ -72,4 +72,17 @@ class Home extends BaseController
         // Devolver la concatenación de todas las vistas
         return $headView . $navbarView . $loginView . $footerView;
     }
+
+    public function galeria(): string
+    {
+        // Concatenar las vistas en una sola cadena de texto
+        $data['titulo'] = 'Galeria';
+        $headView = view('front/head_view', $data);
+        $navbarView = view('front/navbar_view');
+        $galeriaView = view('front/galeria');
+        $footerView = view('front/footer_view');
+
+        // Devolver la concatenación de todas las vistas
+        return $headView . $navbarView . $galeriaView . $footerView;
+    }
 }

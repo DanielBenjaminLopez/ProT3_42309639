@@ -89,7 +89,7 @@
                         <input type="password" class="form-control" id="confirmPassword" placeholder="" required>
                     </div>-->
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Registrarse</button>
+                            <button type="submit" class="btn btn-primary">Registrar</button>
                         </div>
                     </form>
                 </div>

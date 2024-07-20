@@ -78,6 +78,9 @@ $perfil = $session->get('perfil_id');
           <li class="nav-item">
             <a class="nav-link text-light" href='<?php echo base_url('quienes_somos'); ?>'>Quienes somos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href='<?php echo base_url('galeria'); ?>'>Mis eventos</a>
+          </li>
 
           <li class="nav-item">
             <a class="nav-link text-light" href='<?php echo base_url('/logout'); ?>' aria-disabled="true">Cerrar sesión</a>

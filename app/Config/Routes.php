@@ -12,6 +12,7 @@ $routes->get('acerca_de', 'Home::acerca_de');
 $routes->get('quienes_somos', 'Home::quienes_somos');
 $routes->get('registro', 'Home::registro');
 $routes->get('login', 'Home::login');
+$routes->get('galeria', 'Home::galeria');
 
 $routes->get('crud_usuarios', 'usuario_controller::crud_usuarios');
 $routes->get('edit/(:num)', 'usuario_controller::edit/$1');
