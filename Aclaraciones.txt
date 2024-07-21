@@ -16,4 +16,8 @@ IMPLEMENTACIONES - CRUD
 
 -MOFICIACIÓN Y ELIMINACIÓN
 	* Solo el ADMINISTRADOR puede modificar y eliminar
-	* El administrador puede REGISTRAR un usuario cliente.
+	* El ADMINISTRADOR puede REGISTRAR un usuario cliente.
+
+-VISTAS
+	*Solo ADMINISTRADOR tiene una lista de usuarios.
+	*Los usuarios clientes tienen una pestaña "Mis eventos" 	donde pueden ver sus fotos.
