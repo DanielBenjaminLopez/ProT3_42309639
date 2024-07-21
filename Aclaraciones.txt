@@ -1,0 +1,19 @@
+REPOSITORIO:
+https://github.com/DanielBenjaminLopez/ProT3_42309639.git
+
+USUARIO ADMINISTRADOR:
+	EMAIL: pepe@gmail.com
+	CONTRASEÑA: pepe
+
+ACLARACIONES
+-En la base de datos adjunta se puede ver el email de todos los usuarios registrados. 
+-La contraseña de todos los usuarios registrados es "pepe".
+
+IMPLEMENTACIONES - CRUD
+
+-REGISTRO Y LOGIN CON VALIDACIONES RESPECTIVAS.
+	* Los USUARIOS pueden registrarse y logearse.
+
+-MOFICIACIÓN Y ELIMINACIÓN
+	* Solo el ADMINISTRADOR puede modificar y eliminar
+	* El administrador puede REGISTRAR un usuario cliente.
